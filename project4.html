@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Picker</title>
+    <style>
+        body
+        justify-text: center;
+        #container
+        {
+            height:200px;
+            width:300px;
+            margin-top: 70px;
+            border:2px solid black;
+            align-items: center;
+            padding:20px;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id = "container">
+        <input type = "color" id = "choose"><br><br>
+        <p id ="display">#hhhhhh</p><br><br>
+    </div>
+    <script>
+        function color()
+        
+            let c = document.getElementById("choose");
+            let d = document.getElementById("display");
+            c.addEventListener('input',()=>{
+                document.body.style.backgroundColor = c.value;
+                d.innerHTML = c.value;
+            });
+        
+    </script>
+</body>
+</html>
